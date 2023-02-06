@@ -23,15 +23,12 @@
 	};
 </script>
 
-<div
+<button
 	use:inview
 	on:enter|once={onSet}
 	class="flex flex-row items-center justify-center gap-7 w-full md:w-10/12 lg:w-3/4 xl:w-3/6"
-	on:mouseenter={() => {
-		active = true;
-	}}
-	on:mouseleave={() => {
-		active = false;
+	on:click={() => {
+		active = !active;
 	}}
 >
 	<p id={`${data.id}`} class="w-40 md:indent-7 text-left">{data.name}</p>
@@ -47,7 +44,7 @@
 		<!-- <progress value={$progress}/> -->
 		<span>{data.percent}%</span>
 	</div>
-</div>
+</button>
 {#if active}
 	<Code data={data.lang} />
 {/if}
