@@ -25,7 +25,8 @@ let lanstatusschema = new Schema(
 	{
 		id: { type: 'number', sortable: true },
 		name: { type: 'string' },
-		percent: { type: 'number' }
+		percent: { type: 'number' },
+		lang: { type: 'string' }
 	},
 	{
 		dataStructure: 'JSON'
@@ -50,7 +51,7 @@ export async function createLangInfo() {
 		name: 'Python',
 		percent: 50
 	});
-	
+
 	const id = repo.save(info);
 	return id;
 }
@@ -76,4 +77,3 @@ export async function getLangStatus() {
 
 	return info;
 }
-

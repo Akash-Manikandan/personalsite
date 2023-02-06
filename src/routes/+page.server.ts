@@ -9,6 +9,7 @@ type LangStatus = {
 	id: number;
 	name: string;
 	percent: number;
+	lang: string;
 };
 export const load = (async ({ fetch, params }) => {
 	const info: Info[] = JSON.parse(JSON.stringify(await getInfo()));

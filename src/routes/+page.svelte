@@ -2,7 +2,7 @@
 	import type { PageData } from './$types';
 	import Card from './components/Card.svelte';
 	import LangStatus from './components/LangStatus.svelte';
-
+	
 	export let data: PageData;
 </script>
 
@@ -10,6 +10,10 @@
 	<title>Akash | Home</title>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Alex+Brush&display=swap"
+		rel="stylesheet"
+	/>
+	<link
+		href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
 		rel="stylesheet"
 	/>
 </svelte:head>
@@ -24,7 +28,9 @@
 			<Card id={items.id} title={items.title} content={items.content} />
 		{/each}
 	</section>
-	<section class="p-2 md:p-3 lg:p-4 xl:p-5 flex flex-col gap-5 justify-center items-center pt-9 pb-9 ">
+	<section
+		class="p-2 md:p-3 lg:p-4 xl:p-5 flex flex-col gap-5 justify-center items-center pt-9 pb-9 "
+	>
 		{#each data.status as item}
 			<LangStatus data={item} />
 		{/each}
