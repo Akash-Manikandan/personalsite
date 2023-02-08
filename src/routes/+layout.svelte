@@ -5,9 +5,11 @@
 	import { fly, scale } from 'svelte/transition';
 	import { quadOut } from 'svelte/easing';
 	import '../app.css';
+	import { isOpen } from './stores/stores';
 	let navigationList = [
 		{ name: 'Home', navigationRoute: '/' },
 		{ name: 'About', navigationRoute: '/about' },
+		{ name: 'Works', navigationRoute: '/works' },
 		{ name: 'Contact', navigationRoute: '/contact' }
 	];
 	let srcDark: string = 'home/darkmode2.png';
@@ -56,6 +58,12 @@
 			logoSrc = 'logos/light' + random + '.png';
 		}
 	});
+	$: isOpen.set(open);
+
+	$: if (width > 560) {
+		open = false;
+		isOpen.set(false);
+	}
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -87,7 +95,11 @@
 		{#if width > 560}
 			<ul>
 				{#each navigationList as elements}
-					<li><a class="after:bg-[#f25042] dark:after:bg-[#eebbc3]" href={elements.navigationRoute}>{elements.name}</a></li>
+					<li>
+						<a class="after:bg-[#f25042] dark:after:bg-[#eebbc3]" href={elements.navigationRoute}
+							>{elements.name}</a
+						>
+					</li>
 				{/each}
 			</ul>
 		{:else}
@@ -95,7 +107,7 @@
 		{/if}
 	</nav>
 </header>
-{#if open && width <= 560}
+{#if $isOpen && width <= 560}
 	<div>
 		{#each navigationList as link, i}
 			<a href={link.navigationRoute}>
