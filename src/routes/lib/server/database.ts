@@ -32,6 +32,22 @@ let lanstatusschema = new Schema(
 		dataStructure: 'JSON'
 	}
 );
+
+class WorksLinks extends Entity {}
+let workslinksschema = new Schema(
+	WorksLinks,
+	{
+		id: { type: 'number', sortable: true },
+		name: { type: 'string' },
+		deployment: { type: 'string' },
+		github: { type: 'string' },
+		description: { type: 'string' },
+		image: { type: 'string' }
+	},
+	{
+		dataStructure: 'JSON'
+	}
+);
 export async function createInfo() {
 	await connect();
 	const repo = client.fetchRepository(schema);
