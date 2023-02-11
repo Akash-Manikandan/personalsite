@@ -5,7 +5,7 @@
 	import { fly, scale } from 'svelte/transition';
 	import { quadOut } from 'svelte/easing';
 	import '../app.css';
-	import { isOpen } from './stores/stores';
+	import { isDarkMode, isOpen } from './stores/stores';
 	let navigationList = [
 		{ name: 'Home', navigationRoute: '/' },
 		{ name: 'About', navigationRoute: '/about' },
@@ -59,7 +59,7 @@
 		}
 	});
 	$: isOpen.set(open);
-
+	$: isDarkMode.set(darkMode);
 	$: if (width > 560) {
 		open = false;
 		isOpen.set(false);
@@ -240,7 +240,7 @@
 		width: 80%;
 		align-items: center;
 	}
-	@media screen and (max-width: 560px) {
+	@media screen and (max-width: 768px) {
 		button {
 			img {
 				width: 80px;
