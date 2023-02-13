@@ -28,9 +28,14 @@
 	>
 		<a
 			target="_blank"
-			class="w-full lg:w-4/6 self-center"
+			class="w-full lg:w-4/6 self-center flex items-center"
 			rel="noreferrer"
 			href={`https://${data.deployment}`}
+			style={width > 1024
+				? data.id % 2 == 0
+					? 'justify-content:flex-end'
+					: 'justify-content:flex-start'
+				: 'justify-content: flex-start;'}
 		>
 			<img
 				src={data.image}
