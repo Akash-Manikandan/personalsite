@@ -8,6 +8,7 @@
 		description: string;
 		image: string;
 	};
+	export let width: number;
 </script>
 
 <div
@@ -17,7 +18,14 @@
 	<div style="font-family: 'Itim';" class="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold">
 		{data.name}
 	</div>
-	<div class="flex gap-6 flex-col lg:flex-row">
+	<div
+		class="container-d flex gap-6 flex-col"
+		style={width > 1024
+			? data.id % 2 == 0
+				? 'flex-direction:row-reverse'
+				: 'flex-direction:row'
+			: 'flex-direction: column;'}
+	>
 		<a
 			target="_blank"
 			class="w-full lg:w-4/6 self-center"

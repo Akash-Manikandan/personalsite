@@ -3,7 +3,10 @@
 	import WorksCard from '../components/WorksCard.svelte';
 	import { isOpen } from '../stores/stores';
 	export let data: PageData;
+	let width: number;
 </script>
+
+<svelte:window bind:innerWidth={width} />
 
 <svelte:head>
 	<title>Akash | Works</title>
@@ -15,7 +18,7 @@
 
 <main class="absolute main-container flex flex-col gap-5" style={$isOpen ? 'top: 55%' : 'top: 35%'}>
 	{#each data.info as item}
-		<WorksCard data={item} />
+		<WorksCard data={item} width={width} />
 	{/each}
 </main>
 

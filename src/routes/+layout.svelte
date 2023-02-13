@@ -96,7 +96,7 @@
 			<ul>
 				{#each navigationList as elements}
 					<li>
-						<a class="after:bg-[#f25042] dark:after:bg-[#eebbc3]" href={elements.navigationRoute}
+						<a class="after:bg-[#f25042] dark:after:bg-[#eebbc3]" data-sveltekit-preload-data="hover" href={elements.navigationRoute}
 							>{elements.name}</a
 						>
 					</li>
