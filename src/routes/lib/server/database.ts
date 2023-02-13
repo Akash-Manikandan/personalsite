@@ -120,7 +120,7 @@ export async function getLangStatus() {
 export async function getWorkLinks() {
 	await connect();
 	const repo = client.fetchRepository(workslinksschema);
-	const info = await repo.search().sortAsc('id').returnAll();
+	const info = await repo.search().sortDesc('id').returnAll();
 
 	return info;
 }
