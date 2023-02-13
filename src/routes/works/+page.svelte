@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PageData } from '../$types';
+	import type { PageData } from './$types';
 	import WorksCard from '../components/WorksCard.svelte';
 	import { isOpen } from '../stores/stores';
 	export let data: PageData;
@@ -18,7 +18,7 @@
 
 <main class="absolute main-container flex flex-col gap-5" style={$isOpen ? 'top: 55%' : 'top: 35%'}>
 	{#each data.info as item}
-		<WorksCard data={item} width={width} />
+		<WorksCard data={item} {width} />
 	{/each}
 </main>
 
