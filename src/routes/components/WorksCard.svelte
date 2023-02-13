@@ -19,7 +19,7 @@
 		{data.name}
 	</div>
 	<div
-		class="container-d flex gap-6 flex-col"
+		class="container-d flex gap-8 flex-col"
 		style={width > 1024
 			? data.id % 2 == 0
 				? 'flex-direction:row-reverse'
@@ -108,7 +108,7 @@
 				</div>
 				<div class="flex flex-col gap-4">
 					<p style="font-family: 'Itim';">DESCRIPTION</p>
-					<p style="font-family: Kalam;">
+					<p style="font-family: Kalam;" class="text-justify">
 						{data.description}
 					</p>
 				</div>
