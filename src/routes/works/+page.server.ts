@@ -1,3 +1,4 @@
+import { getWorkLinks } from '../lib/server/database';
 import type { PageServerLoad } from './$types';
 type WorksLinks = {
 	id: number;
@@ -7,4 +8,10 @@ type WorksLinks = {
 	description: string;
 	image: string;
 };
-export const load = (async ({ fetch, params }) => {}) satisfies PageServerLoad;
+export const load = (async ({ fetch, params }) => {
+	const info: WorksLinks[] = JSON.parse(JSON.stringify(await getWorkLinks()));
+
+	return {
+		info: info
+	};
+}) satisfies PageServerLoad;
