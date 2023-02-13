@@ -26,7 +26,7 @@
 		>
 			<img
 				src={data.image}
-				alt="AssignmentSite"
+				alt={data.name}
 				class="rounded-sm md:rounded-md lg:rounded-lg xl:rounded-xl shadow-2xl dark:shadow-sm"
 			/>
 		</a>
