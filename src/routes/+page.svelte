@@ -2,8 +2,10 @@
 	import type { PageData } from './$types';
 	import Card from './components/Card.svelte';
 	import LangStatus from './components/LangStatus.svelte';
-	
+
 	export let data: PageData;
+
+	let adj: string[] = ['OPTIMISTIC', 'RESULT-DRIVEN', 'PROBLEM-SOLVING'];
 </script>
 
 <svelte:head>
@@ -20,7 +22,14 @@
 
 <section class="signature">
 	<div class="name text-[#994ff3] dark:text-[#ef4565] font-semibold">Akash M</div>
-	<div class="description dark:text-[#b8c1ec]">OPTIMISTIC | RESULT-DRIVEN | PROBLEM-SOLVING</div>
+	<div class="description dark:text-[#b8c1ec]">
+		{#each [...adj] as item, index}
+			<span>{item}</span>
+			{#if index !== [...adj].length - 1}
+				<span> | </span>
+			{/if}
+		{/each}
+	</div>
 </section>
 <main class="main-container-1">
 	<section class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 md:p-3 lg:p-4 xl:p-5">

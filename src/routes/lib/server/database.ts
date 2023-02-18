@@ -76,14 +76,16 @@ export async function createWorks() {
 	const repo = client.fetchRepository(workslinksschema);
 	const info = repo.createEntity(
 		{
-			id: 8,
-			name: 'Personal Site',
-			deployment: 'personalsite-five-sigma.vercel.app',
-			github: 'https://github.com/Akash-Manikandan/personalsite',
-			description: `A portfolio website built with Sveltekit, Tailwind CSS and using Redis as the database for content management would be a modern and efficient platform for showcasing personal or professional achievements and projects. 
-					The portfolio website built with Sveltekit and Redis would offer a simple and intuitive platform for managing and showcasing personal or professional projects, experiences, and skills. Which could easily add and edit content, 
-					manage images and media, and customize the layout and style of the website.`,
-			image: '/works/personal-site.png'
+			id: 9,
+			name: 'XO Game',
+			deployment: 'xo-three.vercel.app',
+			github: 'https://github.com/Akash-Manikandan/xo',
+			description: `A simple XO (Tic-Tac-Toe) game written in Angular would be a great example of how to build a small, 
+						  but fun and interactive application using this powerful framework. With Angular, you could create a 
+						  simple and responsive UI that allows players to click on the cells of the grid, update the state of the game, 
+						  and display the winner or draw condition. Overall, building an XO game with Angular is a great way to learn the fundamentals of the 
+						  framework, while also creating a fun and interactive application that can be enjoyed by players of all ages.`,
+			image: '/works/xo-angular.png'
 		}
 	);
 
