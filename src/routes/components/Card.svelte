@@ -18,7 +18,7 @@
 		{#if content.length === 1}
 			<p class="text-justify">{content}</p>
 		{:else}
-			<ul class="flex flex-col m-7">
+			<ul class="flex flex-col my-7 ml-7">
 				{#each content as items}
 					<li class="list-disc">{items}</li>
 				{/each}

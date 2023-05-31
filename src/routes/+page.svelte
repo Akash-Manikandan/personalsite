@@ -73,7 +73,7 @@
 	@media screen and (max-width: 560px) {
 		.signature {
 			width: 60%;
-			top: 55%;
+			top: 60%;
 		}
 	}
 </style>
