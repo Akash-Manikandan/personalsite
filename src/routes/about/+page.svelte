@@ -52,12 +52,26 @@
 			<p class="px-3 py-2 text-left">{p}</p>
 		{/each}
 	</div>
-	<div class="flex w-full items-center justify-center my-5">
+	<div class="flex w-full items-center justify-center my-5 flex-col gap-5">
+		<!-- width="550px"
+		height="630px" -->
+		<p style="font-family: 'Maven Pro', sans-serif;" class="font-bold text-xl">My Resume</p>
 		<iframe
-			width="550px"
-			height="630px"
+			class="w-[560px] h-[630px] max-sm:w-[300px] max-sm:h-[400px] framerr"
+			frameborder="0"
+			allowfullscreen={true}
+			loading="eager"
 			title="Resume"
 			src="https://drive.google.com/file/d/10kJ5-fgr0JhdUU3je9iBQ1pt4-SZmXeE/preview"
 		/>
 	</div>
 </div>
+
+<style lang="scss">
+	@media screen and (max-width: 560px) {
+		.framerr {
+			width: 95%;
+			height: 400px;
+		}
+	}
+</style>
