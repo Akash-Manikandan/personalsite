@@ -12,7 +12,7 @@
 		{ name: 'Works', navigationRoute: '/works' },
 		{ name: 'Contact', navigationRoute: '/contact' }
 	];
-	let srcDark: string = 'home/darkmode2.png';
+	let srcDark: string = 'home/darkmode3.png';
 	let srcLight: string = 'home/lightmode.png';
 	let darkMode: boolean;
 	let open: boolean;
@@ -216,7 +216,7 @@
 		outline: 0;
 		background-color: transparent;
 		img[alt='darkmode'] {
-			transform: scaleX(-1);
+			// transform: scaleX(-1);
 			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.12));
 		}
 		img {
