@@ -76,16 +76,16 @@ export async function createWorks() {
 	const repo = client.fetchRepository(workslinksschema);
 	const info = repo.createEntity(
 		{
-			id: 9,
-			name: 'XO Game',
-			deployment: 'xo-three.vercel.app',
-			github: 'https://github.com/Akash-Manikandan/xo',
-			description: `A simple XO (Tic-Tac-Toe) game written in Angular would be a great example of how to build a small, 
-						  but fun and interactive application using this powerful framework. With Angular, you could create a 
-						  simple and responsive UI that allows players to click on the cells of the grid, update the state of the game, 
-						  and display the winner or draw condition. Overall, building an XO game with Angular is a great way to learn the fundamentals of the 
-						  framework, while also creating a fun and interactive application that can be enjoyed by players of all ages.`,
-			image: '/works/xo-angular.png'
+			id: 0,
+			name: 'Query Management System',
+			deployment: 'https://forum-frontend-steel.vercel.app/',
+			github: 'https://github.com/KE2002/forumFrontend',
+			description: `A forum page where we have combined the power of Angular, NestJS, and Neo4j to create an exceptional platform for meaningful discussions. 
+						  With Angular as our frontend framework, we have crafted a visually appealing and interactive user interface that ensures a seamless browsing experience. 
+						  NestJS, our chosen backend framework, provides a robust and scalable foundation for our forum site, allowing us to handle complex business logic, authentication, 
+						  and data management with ease. And with Neo4j as our database, we have embraced the flexibility and efficiency of a graph database, enabling us to store and query relationships between forum topics, users, and their interactions. 
+						  Together, this tech stack empowers our forum site to offer a dynamic and engaging environment for users to connect, share knowledge, and participate in vibrant discussions.`,
+			image: '/works/forum-frontend.png'
 		}
 	);
 
