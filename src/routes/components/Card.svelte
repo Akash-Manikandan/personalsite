@@ -1,7 +1,16 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	export let id: number;
 	export let title: string;
 	export let content: string[];
+	const listStyle: string[] = ['circle', 'disc', 'square', 'lower-roman', 'lower-latin'];
+	const indexFn = (min = 0, max = listStyle.length) =>
+		Math.floor(Math.random() * (max - min)) + min;
+	let index = 0;
+	onMount(() => {
+		index = indexFn();
+	});
 </script>
 
 <div
@@ -20,7 +29,7 @@
 		{:else}
 			<ul class="flex flex-col my-7 ml-7">
 				{#each content as items}
-					<li class="list-disc">{items}</li>
+					<li style="list-style-type: {listStyle[index]};">{items}</li>
 				{/each}
 			</ul>
 		{/if}
