@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>Akash | Contact</title>
-	<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet" />
 </svelte:head>
 
 <div bind:clientWidth={width} />
@@ -49,12 +49,12 @@
 		</a>
 	</div>
 	<div
-		style="width: {width > 768 ? width / 2.2 : width}px;height: {width > 768
-			? width / 2.2
-			: width}px;"
-		class="max-md:col-span-1 col-span-2 flex items-center justify-center"
+		
+		class="max-md:col-span-1 col-span-2 flex flex-col gap-8 items-center justify-center"
 	>
+		<p>Address</p>
 		<Globe width={width > 768 ? width / 2.2 : width - 30} />
+		<address class="pb-4">Chennai, Tamil Nadu, India</address>
 	</div>
 </main>
 
