@@ -1,13 +1,17 @@
 <script lang="ts">
+	import Globe from '../components/Globe.svelte';
 	import { isOpen } from '../stores/stores';
+	let width: number;
 </script>
 
 <svelte:head>
 	<title>Akash | Contact</title>
+	<link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
 </svelte:head>
 
+<div bind:clientWidth={width} />
 <main
-	class="grid grid-cols-2 max-md:grid-cols-1 max-md:gap-11 justify-items-center absolute main-container w-full"
+	class="grid grid-cols-2 max-md:grid-cols-1 gap-y-24 mb-5 max-md:gap-11 justify-items-center absolute main-container w-full"
 	style={$isOpen ? 'top: 410px' : 'top: 35%'}
 >
 	<div class="flex flex-col items-center gap-3">
@@ -43,6 +47,14 @@
 				height="40%"
 			/>
 		</a>
+	</div>
+	<div
+		style="width: {width > 768 ? width / 2.2 : width}px;height: {width > 768
+			? width / 2.2
+			: width}px;"
+		class="max-md:col-span-1 col-span-2 flex items-center justify-center"
+	>
+		<Globe width={width > 768 ? width / 2.2 : width - 30} />
 	</div>
 </main>
 
