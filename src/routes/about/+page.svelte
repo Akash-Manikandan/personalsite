@@ -2,6 +2,7 @@
 	import { tweened } from 'svelte/motion';
 	import { isOpen } from '../stores/stores';
 	import { cubicOut } from 'svelte/easing';
+	import Music from '../components/Music.svelte';
 	const progress = tweened(15, {
 		duration: 1000,
 		easing: cubicOut
@@ -53,6 +54,7 @@
 			<p class="px-3 py-2 text-left">{p}</p>
 		{/each}
 	</div>
+	<Music />
 	<div class="flex w-full items-center justify-center my-5 flex-col gap-5">
 		<!-- width="550px"
 		height="630px" -->
