@@ -71,14 +71,6 @@
 <svelte:head>
 	<meta name="description" content="Personal Site Maintained By Akash M" />
 	<link href="https://fonts.googleapis.com/css2?&family=Itim&display=swap" rel="stylesheet" />
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/base.css"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/svelte-hamburgers@3/dist/css/types/spin.css"
-	/>
 </svelte:head>
 <header>
 	<nav class="navigation">

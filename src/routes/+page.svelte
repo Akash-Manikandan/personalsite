@@ -14,10 +14,6 @@
 		href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Alex+Brush&display=swap"
 		rel="stylesheet"
 	/>
-	<link
-		href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/themes/prism.min.css"
-		rel="stylesheet"
-	/>
 </svelte:head>
 
 <section class="signature">
